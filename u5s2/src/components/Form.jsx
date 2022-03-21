@@ -10,6 +10,7 @@ const Form = () => {
 	const [data, setData] = useState([]);
 	const [filter, setFilter] = useState("All");
 	const [displayData, setDisplayData] = useState([]);
+	const [sorting, setSorting] = useState("");
 	useEffect(() => {
 		getEmployeeData();
 		sortFilter();
@@ -17,7 +18,7 @@ const Form = () => {
 
 	useEffect(() => {
 		sortFilter();
-	}, [filter]);
+	}, [filter, sorting]);
 	const getEmployeeData = () => {
 		fetch(`http://localhost:3000/employees`)
 			.then((response) => response.json())
@@ -55,20 +56,27 @@ const Form = () => {
 	};
 	// Show All Departments, Show Marketing , Show HR , Show IT  ,Show Finance
 	const sortFilter = () => {
-	
-		let newData = data.filter((element) => {
-			if (filter === "Marketing") {
-				return element.department === "Marketing";
-			} else if (filter === "HR") {
-				return element.department === "HR";
-			} else if (filter === "IT") {
-				return element.department === "IT";
-			} else if (filter === "Finance") {
-				return element.department === "Finance";
-			} else if (filter === "All" || filter === "") {
-				return element;
-			}
-		});
+		let newData = data
+			.filter((element) => {
+				if (filter === "Marketing") {
+					return element.department === "Marketing";
+				} else if (filter === "HR") {
+					return element.department === "HR";
+				} else if (filter === "IT") {
+					return element.department === "IT";
+				} else if (filter === "Finance") {
+					return element.department === "Finance";
+				} else if (filter === "All" || filter === "") {
+					return element;
+				}
+			})
+			.sort((a, b) => {
+				if (sorting === "Ascending") {
+					return a.salary - b.salary;
+				} else if (sorting === "Descending") {
+					return b.salary - a.salary;
+				}
+			});
 		setDisplayData(newData);
 	};
 	return (
@@ -150,6 +158,20 @@ const Form = () => {
 				}}
 			>
 				Show IT
+			</button>
+			<button
+				onClick={() => {
+					setSorting("Ascending");
+				}}
+			>
+				Sort By Salary Ascending
+			</button>
+			<button
+				onClick={() => {
+					setSorting("Descending");
+				}}
+			>
+				Sort By Salary Descending
 			</button>
 
 			<div>

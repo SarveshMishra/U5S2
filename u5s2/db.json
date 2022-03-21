@@ -1,44 +1,60 @@
 {
-  "employees": [
-    {
-      "name": "Sarvesh gg",
-      "department": "IT",
-      "gender": "afsaf",
-      "role": "afsaf",
-      "salary": "afsafs",
-      "id": 1
-    },
-    {
-      "name": "afasfasf",
-      "department": "Marketing",
-      "gender": "affasfsf",
-      "role": "afafasf",
-      "salary": "affasf",
-      "id": 2
-    },
-    {
-      "name": "JAY PRAKASH MISHRA",
-      "department": "Finance",
-      "gender": "afsfsaf",
-      "role": "afsfa",
-      "salary": "afaf",
-      "id": 3
-    },
-    {
-      "name": "1mg-clone",
-      "department": "HR",
-      "gender": "hjfa",
-      "role": "faf",
-      "salary": "afasf",
-      "id": 4
-    },
-    {
-      "name": "1mg",
-      "department": "IT",
-      "gender": "afaf",
-      "role": "afaf",
-      "salary": "afasf",
-      "id": 5
-    }
-  ]
+	"employees": [
+		{
+			"name": "Sarvesh Mishra",
+			"department": "IT",
+			"gender": "Male",
+			"role": "Engineer",
+			"salary": "20000",
+			"id": 1
+		},
+		{
+			"name": "Sarvesh Mishra",
+			"department": "Finance",
+			"gender": "Male",
+			"role": "Engineer",
+			"salary": "2000",
+			"id": 2
+		},
+		{
+			"name": "Sarvesh Mishra",
+			"department": "HR",
+			"gender": "Male",
+			"role": "Engineer",
+			"salary": "200",
+			"id": 3
+		},
+		{
+			"name": "Sarvesh Mishra",
+			"department": "Marketing",
+			"gender": "Male",
+			"role": "Engineer",
+			"salary": "10000",
+			"id": 4
+		},
+		{
+			"name": "Sarvesh Mishra",
+			"department": "IT",
+			"gender": "Male",
+			"role": "Engineer",
+			"salary": "22000",
+			"id": 5
+		},
+		{
+			"name": "Sarvesh Mishra",
+			"department": "IT",
+			"gender": "Male",
+			"role": "Engineer",
+			"salary": "207700",
+			"id": 6
+		},
+		{
+			"name": "Sarvesh Mishra",
+			"department": "HR",
+			"gender": "Male",
+			"role": "Engineer",
+			"salary": "2000760",
+			"id": 7
+		}
+	]
 }
