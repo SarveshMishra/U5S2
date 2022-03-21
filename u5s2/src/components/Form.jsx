@@ -174,7 +174,7 @@ const Form = () => {
 				Sort By Salary Descending
 			</button>
 
-			<div>
+			<div className="data">
 				{displayData.map((ele) => {
 					return (
 						<div key={ele.id}>
